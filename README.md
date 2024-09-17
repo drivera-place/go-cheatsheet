@@ -48,7 +48,7 @@ go clean -i importpath...
 
 You can create a multi module project referencing dependencies, and indicating go compiler where to find types and packages.
 
-In your main directory run `go work init`
+In your main directory run `go work init`:
 
 ```bash
 go work init
@@ -56,14 +56,14 @@ go work init
 
 _This will create a `go.work` file._
 
-Create a module under its own directory
+Create a module under its own directory:
 
 ```bash
-gomod init myAModule
+go mod init myAModule
 ```
 
-Import reference from `myAModule` to `myBModule`
+Import module reference in `go.work` file:
 
 ```bash
-gomod use ./myAModule
+go work use ./myAModule
 ```
